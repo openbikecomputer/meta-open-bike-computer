@@ -1,0 +1,12 @@
+[Unit]
+Description=Start openbikecomputer-core application
+After=weston.socket
+
+[Service]
+Environment="XDG_RUNTIME_DIR=/run/"
+Environment="WAYLAND_DISPLAY=wayland-0"
+
+ExecStart=/usr/bin/openbikecomputer-core
+
+[Install]
+WantedBy=multi-user.target
