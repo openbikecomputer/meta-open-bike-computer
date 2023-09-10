@@ -1,9 +1,9 @@
-LICENSE = "GPL3"
-LIC_FILES_CHKSUM = "file://LICENSE;md5=5e2a33e58b999de64e423845a57990ef"
+LICENSE = "GPL-3.0-or-later"
+LIC_FILES_CHKSUM = "file://LICENSE;md5=1ebbd3e34237af26da5dc08a4e440464"
 FILESEXTRAPATHS:prepend := "${THISDIR}/${PN}:"
 
 SRC_URI = " \
-    git://git@github.com/openbikecomputer/openbikecomputer-core.git;protocol=ssh;branch=master \
+    git://git@github.com/openbikecomputer/openbikecomputer-core.git;protocol=ssh;branch=main \
     file://openbikecomputer-core.service \
 "
 
