@@ -8,7 +8,7 @@ SRC_URI = " \
 "
 
 PV = "1.0+git${SRCPV}"
-SRCREV = "12df73571471ffb8a0b3264c667b8665cc0932d3"
+SRCREV = "6622a0b37c9a506918628ec29d4b4aafcd580a1b"
 
 S = "${WORKDIR}/git"
 
@@ -16,13 +16,13 @@ inherit systemd
 SYSTEMD_AUTO_ENABLE = "enable"
 SYSTEMD_SERVICE:${PN} = "openbikecomputer-core.service"
 
-DEPENDS += " \
-            lvgl \
-            lv-drivers \
+DEPENDS = " \
+   lvgl \
+   lv-drivers \
 "
 
-RDEPENDS:${PN} += " \
-                   weston-init \
+RDEPENDS:${PN} = " \
+    weston-init \
 "
 
 FILES:${PN} = "/lib/systemd/system/openbikecomputer-core.service /usr/bin/openbikecomputer-core"
