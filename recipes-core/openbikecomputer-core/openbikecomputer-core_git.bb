@@ -7,7 +7,7 @@ SRC_URI = " \
     file://openbikecomputer-core.service \
 "
 
-PV = "1.0+git${SRCPV}"
+PV = "0.1+git${SRCPV}"
 SRCREV = "82347254910752a95bef9570f0c7abd0ea06d438"
 
 S = "${WORKDIR}/git"
