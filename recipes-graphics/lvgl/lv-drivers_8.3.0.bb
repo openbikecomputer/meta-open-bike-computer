@@ -27,7 +27,8 @@ TARGET_CFLAGS += "-I${RECIPE_SYSROOT}/${includedir}/lvgl"
 
 FILES:${PN}-dev += "\
     ${includedir}/lvgl/lv_drivers/ \
-    "
+    ${libdir}/liblv-wayland-protocol.a \
+"
 
 do_compile:prepend() {
 	# Generate wayland xdg protocol source file
@@ -36,9 +37,19 @@ do_compile:prepend() {
 	make
 }
 
+do_compile:append() {
+	# Create an static librarie with the generated wayland protocol
+	${CC} -c ${CFLAGS} -I${S}/wayland/protocols/ ${S}/wayland/protocols/wayland-xdg-shell-client-protocol.c -o ${WORKDIR}/wayland-protocol.o
+	${AR} -r ${WORKDIR}/liblv-wayland-protocol.a ${WORKDIR}/wayland-protocol.o
+}
+
 do_install:append() {
 	# Install generated wayland protocol in destination include folder
 	install -d ${D}/usr/include/lvgl/lv_drivers/wayland/protocols
 	install -m 644 ${S}/wayland/protocols/wayland-xdg-shell-client-protocol.h ${D}/usr/include/lvgl/lv_drivers/wayland/protocols/
 	install -m 644 ${S}/wayland/protocols/wayland-xdg-shell-client-protocol.c ${D}/usr/include/lvgl/lv_drivers/wayland/protocols/
+
+	# Install the create wayland protocol librarie
+	install -d ${D}/${libdir}/
+	install -m 644 ${WORKDIR}/liblv-wayland-protocol.a ${D}/${libdir}/
 }
