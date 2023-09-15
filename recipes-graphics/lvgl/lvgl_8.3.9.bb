@@ -9,7 +9,7 @@ LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENCE.txt;md5=bf1198c89ae87f043108cea62460b03a"
 
 SRC_URI = "gitsm://github.com/lvgl/lvgl;destsuffix=${S};protocol=https;nobranch=1"
-SRCREV = "9024b72b4853e1e7ac29a42e54b7a10d3c4f3b20"
+SRCREV = "9ec3b8706b098f60940cee6ac211d3cb3141aedf"
 
 REQUIRED_DISTRO_FEATURES = "wayland"
 
@@ -22,4 +22,4 @@ S = "${WORKDIR}/${PN}-${PV}"
 FILES:${PN}-dev += "\
     ${includedir}/${PN}/ \
     ${includedir}/${PN}/lvgl/ \
-    "
+"
