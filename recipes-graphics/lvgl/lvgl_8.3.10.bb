@@ -9,7 +9,7 @@ LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENCE.txt;md5=bf1198c89ae87f043108cea62460b03a"
 
 SRC_URI = "gitsm://github.com/lvgl/lvgl;destsuffix=${S};protocol=https;nobranch=1"
-SRCREV = "9ec3b8706b098f60940cee6ac211d3cb3141aedf"
+SRCREV = "06e229cc7679c01119ca5d905a1f9dad96f475f0"
 
 REQUIRED_DISTRO_FEATURES = "wayland"
 
