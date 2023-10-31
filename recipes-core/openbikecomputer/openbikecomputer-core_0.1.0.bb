@@ -31,6 +31,7 @@ FILES:${PN} = " \
 	/lib/systemd/system/openbikecomputer-core.service \
 	/usr/bin/openbikecomputer-core \
 	/etc/openbikecomputer/*.conf \
+	/usr/share/openbikecomputer/* \
 "
 
 CFLAGS += " -DLV_CONF_INCLUDE_SIMPLE=1 -DLV_LVGL_H_INCLUDE_SIMPLE=1"
