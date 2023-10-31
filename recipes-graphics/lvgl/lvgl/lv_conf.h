@@ -255,7 +255,7 @@
  *If LV_USE_LOG is enabled an error message will be printed on failure*/
 #define LV_USE_ASSERT_NULL          1   /*Check if the parameter is NULL. (Very fast, recommended)*/
 #define LV_USE_ASSERT_MALLOC        1   /*Checks is the memory is successfully allocated or no. (Very fast, recommended)*/
-#define LV_USE_ASSERT_STYLE         0   /*Check if the styles are properly initialized. (Very fast, recommended)*/
+#define LV_USE_ASSERT_STYLE         1   /*Check if the styles are properly initialized. (Very fast, recommended)*/
 #define LV_USE_ASSERT_MEM_INTEGRITY 0   /*Check the integrity of `lv_mem` after critical operations. (Slow)*/
 #define LV_USE_ASSERT_OBJ           0   /*Check the object's type and existence (e.g. not deleted). (Slow)*/
 
@@ -268,14 +268,14 @@
  *-----------*/
 
 /*1: Show CPU usage and FPS count*/
-#define LV_USE_PERF_MONITOR 0
+#define LV_USE_PERF_MONITOR 1
 #if LV_USE_PERF_MONITOR
     #define LV_USE_PERF_MONITOR_POS LV_ALIGN_BOTTOM_RIGHT
 #endif
 
 /*1: Show the used memory and the memory fragmentation
  * Requires LV_MEM_CUSTOM = 0*/
-#define LV_USE_MEM_MONITOR 0
+#define LV_USE_MEM_MONITOR 1
 #if LV_USE_MEM_MONITOR
     #define LV_USE_MEM_MONITOR_POS LV_ALIGN_BOTTOM_LEFT
 #endif
@@ -350,27 +350,27 @@
 
 /*Montserrat fonts with ASCII range and some symbols using bpp = 4
  *https://fonts.google.com/specimen/Montserrat*/
-#define LV_FONT_MONTSERRAT_8  0
-#define LV_FONT_MONTSERRAT_10 0
-#define LV_FONT_MONTSERRAT_12 0
+#define LV_FONT_MONTSERRAT_8  1
+#define LV_FONT_MONTSERRAT_10 1
+#define LV_FONT_MONTSERRAT_12 1
 #define LV_FONT_MONTSERRAT_14 1
-#define LV_FONT_MONTSERRAT_16 0
-#define LV_FONT_MONTSERRAT_18 0
-#define LV_FONT_MONTSERRAT_20 0
-#define LV_FONT_MONTSERRAT_22 0
-#define LV_FONT_MONTSERRAT_24 0
-#define LV_FONT_MONTSERRAT_26 0
-#define LV_FONT_MONTSERRAT_28 0
-#define LV_FONT_MONTSERRAT_30 0
-#define LV_FONT_MONTSERRAT_32 0
-#define LV_FONT_MONTSERRAT_34 0
-#define LV_FONT_MONTSERRAT_36 0
-#define LV_FONT_MONTSERRAT_38 0
-#define LV_FONT_MONTSERRAT_40 0
-#define LV_FONT_MONTSERRAT_42 0
-#define LV_FONT_MONTSERRAT_44 0
-#define LV_FONT_MONTSERRAT_46 0
-#define LV_FONT_MONTSERRAT_48 0
+#define LV_FONT_MONTSERRAT_16 1
+#define LV_FONT_MONTSERRAT_18 1
+#define LV_FONT_MONTSERRAT_20 1
+#define LV_FONT_MONTSERRAT_22 1
+#define LV_FONT_MONTSERRAT_24 1
+#define LV_FONT_MONTSERRAT_26 1
+#define LV_FONT_MONTSERRAT_28 1
+#define LV_FONT_MONTSERRAT_30 1
+#define LV_FONT_MONTSERRAT_32 1
+#define LV_FONT_MONTSERRAT_34 1
+#define LV_FONT_MONTSERRAT_36 1
+#define LV_FONT_MONTSERRAT_38 1
+#define LV_FONT_MONTSERRAT_40 1
+#define LV_FONT_MONTSERRAT_42 1
+#define LV_FONT_MONTSERRAT_44 1
+#define LV_FONT_MONTSERRAT_46 1
+#define LV_FONT_MONTSERRAT_48 1
 
 /*Demonstrate special features*/
 #define LV_FONT_MONTSERRAT_12_SUBPX      0
@@ -566,7 +566,7 @@
 #if LV_USE_THEME_DEFAULT
 
     /*0: Light mode; 1: Dark mode*/
-    #define LV_THEME_DEFAULT_DARK 0
+    #define LV_THEME_DEFAULT_DARK 1
 
     /*1: Enable grow on press*/
     #define LV_THEME_DEFAULT_GROW 1
@@ -606,9 +606,9 @@
 #endif
 
 /*API for open, read, etc*/
-#define LV_USE_FS_POSIX 0
+#define LV_USE_FS_POSIX 1
 #if LV_USE_FS_POSIX
-    #define LV_FS_POSIX_LETTER '\0'     /*Set an upper cased letter on which the drive will accessible (e.g. 'A')*/
+    #define LV_FS_POSIX_LETTER 'D'     /*Set an upper cased letter on which the drive will accessible (e.g. 'A')*/
     #define LV_FS_POSIX_PATH ""         /*Set the working directory. File/directory paths will be appended to it.*/
     #define LV_FS_POSIX_CACHE_SIZE 0    /*>0 to cache this number of bytes in lv_fs_read()*/
 #endif
@@ -629,7 +629,7 @@
 #endif
 
 /*PNG decoder library*/
-#define LV_USE_PNG 0
+#define LV_USE_PNG 1
 
 /*BMP decoder library*/
 #define LV_USE_BMP 0
